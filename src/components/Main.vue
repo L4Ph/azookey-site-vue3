@@ -3,7 +3,7 @@
     <!-- Page Header with Conditional Carousel or Static Images -->
     <PageHeader>
       <div align="center" v-if="phone">
-        <carousel :autoplay="true" :loop="true" :scrollPerPage="false" :paginationEnabled="false">
+        <carousel :loop="true" :scrollPerPage="false" :paginationEnabled="false">
           <slide v-for="i in 4" :key="i">
             <img :src="`/static/assets/s${i - 1}.png`" class="slide_item" />
           </slide>
@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 
 import TheFooter from './TheFooter.vue'

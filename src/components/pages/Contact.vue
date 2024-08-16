@@ -4,12 +4,8 @@
       <ArticleHeader1>お問い合わせ</ArticleHeader1>
     </PageHeader>
     <PageArticle>
-      <p>
-        以下よりお問い合わせの種類を選び、フォームへのご記入をお願いいたします。
-      </p>
-      <p>
-        「質問・連絡・その他」をお選びいただく場合、返信可能なメールアドレスをご用意ください。
-      </p>
+      <p>以下よりお問い合わせの種類を選び、フォームへのご記入をお願いいたします。</p>
+      <p>「質問・連絡・その他」をお選びいただく場合、返信可能なメールアドレスをご用意ください。</p>
       <div v-for="link in links" :key="link.title">
         <h2>{{ link.title }}</h2>
         <p>
@@ -22,8 +18,8 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts">
+import { defineComponent } from 'vue'
 
 import TheFooter from '../TheFooter.vue'
 import ArticleHeader1 from '../ArticleHeader1.vue'
@@ -36,6 +32,7 @@ const image = 'https://azookey.netlify.app/static/og-image.png'
 const title = 'お問い合わせ | azooKey - 自由自在なキーボードアプリ'
 
 export default defineComponent({
+  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Contact',
 
   metaInfo: {
@@ -56,12 +53,13 @@ export default defineComponent({
   components: {
     TheFooter,
     ArticleHeader1,
+    // eslint-disable-next-line vue/no-unused-components
     ArticleHeaderLogo,
     PageHeader,
     PageArticle
   },
 
-  data () {
+  data() {
     return {
       links: [
         {
@@ -77,8 +75,7 @@ export default defineComponent({
         },
         {
           title: '変換候補の追加',
-          description:
-            'azooKeyの辞書への変換候補の追加についてはこちらにお寄せください。',
+          description: 'azooKeyの辞書への変換候補の追加についてはこちらにお寄せください。',
           url: 'https://forms.gle/EG4sxm2t6RxRTyqV6'
         },
         {
@@ -88,13 +85,13 @@ export default defineComponent({
           url: 'https://forms.gle/cj9sBac4XVaJDtzR9'
         }
       ]
-    };
+    }
   },
 
   mounted: () => {
     window.scrollTo(0, 0)
-  },
-});
+  }
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

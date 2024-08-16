@@ -128,7 +128,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import TheFooter from '../TheFooter.vue'
 import PageHeader from '../PageHeader.vue'
 import PageArticle from '../PageArticle.vue'

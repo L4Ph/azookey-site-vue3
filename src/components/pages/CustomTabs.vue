@@ -53,7 +53,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import TheFooter from '../TheFooter.vue'
@@ -139,7 +139,7 @@ const user_made_customtabfiles = ref([
 
 const { copy } = useClipboard()
 
-const copyToClipboard = async (link) => {
+const copyToClipboard = async (link: string) => {
   try {
     await copy(link)
     copy_succeed.value = { target: link, bool: true }

@@ -14,8 +14,8 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts">
+import { defineComponent } from 'vue'
 
 import TheFooter from '../TheFooter.vue'
 import ArticleHeader1 from '../ArticleHeader1.vue'
@@ -109,13 +109,13 @@ export default defineComponent({
             '一番の大きな支援は、azooKeyを宣伝していただくことです。また、余裕があれば<a href="https://github.com/sponsors/ensan-hcl">GitHub Sponsors</a>で寄付をいただけると、開発の励みになります。'
         }
       ]
-    };
+    }
   },
 
   mounted: () => {
     window.scrollTo(0, 0)
-  },
-});
+  }
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
